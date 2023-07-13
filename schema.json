@@ -1,0 +1,32 @@
+[
+  {
+    "name": "hostname",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "ip",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  }
+  {
+    "name": "project",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  }
+  {
+    "name": "topic",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  }
+  {
+    "name": "agency",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  }
+  {
+    "name": "environment",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  }
+]
