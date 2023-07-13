@@ -3,6 +3,9 @@ steps:
   entrypoint: 'curl'
   args: ['-L', '-o', '/workspace/dictionary.csv', 'https://raw.githubusercontent.com/jiayuchann/GCP-test/main/dictionary.csv']
 - name: 'gcr.io/cloud-builders/gcloud'
+  entrypoint: 'curl'
+  args: ['-L', '-o', '/workspace/schema.json', 'https://raw.githubusercontent.com/jiayuchann/GCP-test/main/schema.json']
+- name: 'gcr.io/cloud-builders/gcloud'
   entrypoint: 'bq'
   args: ['load', '--autodetect', '--replace', '--source_format=CSV', '--skip_leading_rows=1', '--schema=/workspace/schema.json', 'bigquery-stuff-389701:sre.dictionary', '/workspace/dictionary.csv']
 
