@@ -1,9 +1,8 @@
 steps:
 - name: 'gcr.io/cloud-builders/curl'
   args: ['-L', '-o', '/workspace/dictionary.csv', 'https://raw.githubusercontent.com/jiayuchann/GCP-test/main/your_csv_file.csv']
-- name: 'gcr.io/cloud-builders/gcloud'
+- name: 'gcr.io/cloud-builders/bq'
   args:
-  - 'bq'
   - 'load'
   - '--autodetect'
   - '--replace'
